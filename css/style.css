@@ -186,9 +186,27 @@ header {
 .hamburguer::before { top: 6px;}
 .hamburguer::after {bottom: 6px;}
 
-.nav-open > nav {
-    transform: translate(0);
+.nav-open .nav {
+    transform: translateX(0);
 }
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburguer {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburguer::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburguer::after {
+    opacity: 0;
+}
+
+
 
 /* Intro section */
 
