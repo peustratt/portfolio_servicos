@@ -112,8 +112,40 @@ header {
     z-index: 3;
 }
 
-nav {
-    display: none;
+.nav {
+    position: fixed;
+    inset: 0 0 0 25%;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    z-index: 10;
+
+    transform: translateX(100%);
+    transition: 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list {
+    height: 100%;
+    margin: 1em 0 0 0;
+    padding: 0;
+    display: grid;
+    justify-content: space-evenly;
+    list-style: none;
+    text-align: center;
+}
+
+.nav__item {
+    font-size: var(--fs-h3);
+}
+
+.nav__link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color: var(--clr-accent);
 }
 
 
