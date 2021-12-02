@@ -148,6 +148,47 @@ header {
     color: var(--clr-accent);
 }
 
+.nav-toggle {
+    border-radius: 3px;
+    background: 0;
+    position: absolute;
+    padding: .5em;
+    top: 1em;
+    right: 1em;
+    z-index: 11;
+    cursor: pointer;
+}
+
+.hamburguer {
+    display: block;
+    position: relative;
+}
+
+
+.hamburguer,
+.hamburguer::before,
+.hamburguer::after {
+    background: var(--clr-accent);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0; 
+}
+
+.hamburguer::before { top: 6px;}
+.hamburguer::after {bottom: 6px;}
+
+.nav-open > nav {
+    transform: translate(0);
+}
 
 /* Intro section */
 
