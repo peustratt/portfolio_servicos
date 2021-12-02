@@ -117,10 +117,20 @@ header {
     inset: 0 0 0 25%;
     color: var(--clr-light);
     background-color: var(--clr-dark);
-    z-index: 10;
+    z-index: 100;
 
     transform: translateX(100%);
     transition: 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav-fundo {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    opacity: 0.7;
+    backdrop-filter: blur(1em);
+    background: hsl(0, 0%, 0% / 0.5);
+    display: none;
 }
 
 .nav__list {
@@ -155,7 +165,7 @@ header {
     padding: .5em;
     top: 1em;
     right: 1em;
-    z-index: 11;
+    z-index: 101;
     cursor: pointer;
 }
 
@@ -190,6 +200,10 @@ header {
     transform: translateX(0);
 }
 
+.nav-open .nav-fundo {
+    display: block;
+}
+
 .nav-open .nav-toggle {
     position: fixed;
 }
@@ -205,7 +219,6 @@ header {
 .nav-open .hamburguer::after {
     opacity: 0;
 }
-
 
 
 /* Intro section */
